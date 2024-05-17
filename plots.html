@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iris Species Variety</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<style>
+
+  #navey {
+    background-color: #b1dcf9;
+    border-bottom: navy 2px solid;
+  }
+  #homey,#classy,#dashy {
+    color: navy;
+  }
+  
+  #homey {
+    opacity: 0.45;
+  }
+  #wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  img {
+    width: 300px;
+    object-fit: cover;
+  }
+  @media screen and (min-width:767px){
+    img {
+      width: 500px;
+      margin-top: 10px;
+    }
+  }
+  @media screen and (min-width:1020px){
+    img {
+      width: 620px;
+      margin-top: 12px;
+    }
+  }
+
+  @media screen and (min-width:1238px){
+    img {
+      width: 650px;
+      margin-top: 15px;
+    }
+  }
+
+  @media screen and (min-width:1430px){
+    img {
+      width: 730px;
+      margin-top: 20px;
+    }
+  }
+</style>
+    </head>
+<body style="background-color:#f1f1f1">  <nav class="navbar navbar-expand-lg navbar-light" id="navey">
+  <a class="navbar-brand" id="classy" href="/index">Iris Classification</a>
+ 
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" id="index" href="{{ url_for('index') }}" >Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link active" id="dashy" href="">Dashboard</a>
+    </div>
+ 
+          </nav>
+  <div id="wrapper">
+  <img src="C:\Users\AAYUSHI SINGH\OneDrive\Desktop\Iris Classification\templates\static\iris_dashboard.jpg"  />
+  </div>
+</body>
+  </html>

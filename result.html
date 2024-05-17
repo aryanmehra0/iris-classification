@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iris Species Variety</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<style>
+
+  #navey {
+    background-color: #b1dcf9;
+    border-bottom: navy 2px solid;
+  }
+  #classy{
+    color: navy;
+  }
+  button {
+    background-color: #b1dcf9;
+    color: navy;
+    border: 2px solid navy;
+    border-radius: 5px;
+  }
+  #iris-img {
+    width: min(100%,360px);
+    border: 2px solid navy;
+    border-radius: 3px;
+    margin: 5vh;
+  }
+  
+  #img-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffd8;
+    border-bottom: 2px solid navy;
+}
+            .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.entry-cont {
+  width: min(100%,360px);
+  background: #ffffd8;
+  color: navy;
+  border: 2px solid navy;
+  border-radius: 8px;
+  margin-top: 5vh;
+  padding: 10px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+ @media screen and (min-width:768px) and (min-aspect-ratio: 1.2) {
+#iris-img {
+  width: min(100%,520px);
+}
+.entry-cont {
+  width: min(100%,520px);
+}
+}
+@media screen and (min-width:768px) and (max-aspect-ratio: 0.9) {
+#iris-img,.entry-cont {
+  width: min(100%,480px);
+}
+
+}
+
+@media screen and (min-width:1050px)  and (max-aspect-ratio:0.9)
+  {
+   #iris-img, .entry-cont {
+   width: min(100%,620px);
+  }
+}
+
+</style>
+    </head>
+<body style="background-color:#f1f1f1">  <nav class="navbar navbar-expand-lg navbar-light" id="navey">
+  <a class="navbar-brand" id="classy" href="/home">Iris Classification</a>
+</nav>
+  <div id="img-div" >
+    <img src="templates/static/iris-species.png" alt=""></div>
+<div class="wrapper">
+  <div class="entry-cont">
+    <h3>{{variety}}</h3>
+    <table>
+  <tr><th></th><th>&nbsp;&nbsp;&nbsp;&nbsp;Probabilities</th><th></th></tr>
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;Setosa: &nbsp;&nbsp;{{proba0}}</td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;Versicolor: &nbsp;&nbsp;{{proba1}}</td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;Virginica: &nbsp;&nbsp;{{proba2}}</td>
+  </tr>
+  <tr><td></td>
+    <td><form action="index">&nbsp;&nbsp;&nbsp;<button>Back</button></form></td>
+    <td></td></tr>
+    </table>
+  </div>
+  <div class="entry-cont">
+  <h5>You entered:</h5>
+  <div>Sepal length (cm): {{slen}}</div>
+  <div>Sepal width (cm): {{swid}}</div>
+   <div>Petal length (cm): {{plen}} </div>
+  <div>Petal width (cm): {{pwid}}</div>
+  </div></div>
+
+  
+</body>
+  </html>
